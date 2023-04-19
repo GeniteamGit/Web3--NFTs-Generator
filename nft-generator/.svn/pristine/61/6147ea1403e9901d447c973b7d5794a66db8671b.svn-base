@@ -1,0 +1,63 @@
+const fs = require("fs");
+const commonLayers = require("../data/commonLayers");
+const dir = __dirname;
+const {
+    width,
+    height,
+} = require("../constants");
+
+module.exports = {
+    name: "Mutant Skin",
+    layers: [
+        {
+            name: "Body",
+            elements: [
+                {
+                    id: 1,
+                    name: "Dreddy",
+                    path: `${dir}/../data/1-Body/Dreddy.png`,
+                    weight: 100,
+                }
+            ],
+            position: {x: 0, y: 0},
+            size: {width: width, height: height},
+        },
+        {
+            name: "Shoes",
+            elements: commonLayers.shoes,
+            position: {x: 0, y: 0},
+            size: {width: width, height: height},
+        },
+        {
+            name: "Dress",
+            elements: commonLayers.dresses,
+            position: {x: 0, y: 0},
+            size: {width: width, height: height},
+        },
+        {
+            name: "Face",
+            elements: [
+                {
+                    id: 1,
+                    name: "Dreddy",
+                    path: `${dir}/../data/5-faces/Faces_Dreddy.png`,
+                    weight: 100,
+                }
+            ],
+            position: {x: 0, y: 0},
+            size: {width: width, height: height},
+        },
+        {
+            name: "Hair",
+            elements: commonLayers.hair,
+            position: {x: 0, y: 0},
+            size: {width: width, height: height},
+        },
+        {
+            name: "Accessories",
+            elements: commonLayers.accessories,
+            position: {x: 0, y: 0},
+            size: {width: width, height: height},
+        },
+    ],
+}

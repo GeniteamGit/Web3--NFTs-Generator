@@ -1,0 +1,43 @@
+const fs = require("fs");
+const dir = __dirname;
+const {
+    startEditionFrom,
+    editionSize,
+    raceSize
+} = require("./constants");
+const original = require("./races/original");
+const mutant = require("./races/mutant");
+const zombie = require("./races/zombie");
+const dreddy = require("./races/dreddy");
+
+const raceWeights = [
+    {
+        value: "original",
+        from: startEditionFrom,
+        to: 700
+    }, {
+        value: "mutant",
+        from: 701,
+        to: 800,
+    }, {
+        value: "zombie",
+        from: 801,
+        to: 900,
+    }, {
+        value: "dreddy",
+        from: 901,
+        to: editionSize,
+    },
+];
+
+const races = {
+    original: original,
+    mutant: mutant,
+    zombie: zombie,
+    dreddy: dreddy,
+};
+
+module.exports = {
+    races,
+    raceWeights,
+};
